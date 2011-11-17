@@ -79,7 +79,7 @@
     
     var toggle_el = document.getElementById('_toggle_mouse_recording');
     
-    document.addEventListener('click', toggle_el, function(){
+    toggle_el.addEventListener('click', function(){
             toggleTracking();
 
             if (timer) {
