@@ -66,12 +66,13 @@
     
     var toggle = [
         "<div id='_toggle_mouse_recording' style='",
-            "position:absolute;",
+            "position:fixed;",
             "top:10px; left: 10px;",
             "background: white",
             "color: green;",
             "font-size: 20px;",
             "cursor:pointer;",
+            "z-index: 1000000;",
         "'>►</div>"
     ].join('');
     
