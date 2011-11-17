@@ -68,9 +68,10 @@
         "<div id='_toggle_mouse_recording' style='",
             "position:absolute;",
             "top:10px; left: 10px;",
-            "width:20px; height: 20px;",
-            "border: 1px solid #ccc;",
             "background: white",
+            "color: green;",
+            "font-size: 20px;",
+            "cursor:pointer;",
         "'>►</div>"
     ].join('');
     
@@ -80,6 +81,14 @@
     
     document.addEventListener('click', toggle_el, function(){
             toggleTracking();
+
+            if (timer) {
+                toggle_el.style.color = 'red';
+                toggle_el.innerHTML = '●';
+            } else {
+                toggle_el.style.color = 'green';
+                toggle_el.innerHTML = '►';
+            }
     }, false);
         
 }(window))
